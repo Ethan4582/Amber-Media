@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amber Films - Cinematic Storytelling Studio Website
 
-## Getting Started
 
-First, run the development server:
+![Screenshot](public/main1.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Screenshot](public/main2.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Screenshot](public/main3.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### 🎨 Design & Aesthetics
+- **Dark Cinematic Theme** - Professional black and gray color palette
+- **Elegant Typography** - Clean, modern fonts with sophisticated hierarchy
+- **Responsive Design** - Mobile-first approach ensuring perfect viewing on all devices
+- **Smooth Animations** - Subtle hover effects and transitions for enhanced user experience
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📱 Core Sections
+- **Hero Landing** - Dramatic introduction with mission statement overlay
+- **About Section** - Comprehensive studio story with statistics and credentials
+- **Team Profiles** - Individual member showcases with professional photography
+- **Awards & Recognition** - Industry accolades and publication features
+- **Client Portfolio** - Premium brands and collaboration highlights
+- **Project Showcase** - Visual storytelling gallery (expandable)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🛠️ Technical Features
+- **Component-Based Architecture** - Modular React components for maintainability
+- **Image Optimization** - Efficient loading and display of high-quality visuals
+- **Interactive Elements** - Engaging user interactions without overwhelming the content
+- **Professional Layout** - Grid systems optimized for visual hierarchy
 
-## Deploy on Vercel
+## 🚀 Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend Framework:** React with functional components and hooks
+- **Styling:** Tailwind CSS with custom utility classes
+- **Icons:** Lucide React for consistent iconography
+- **Image Handling:** Optimized public folder structure
+- **Responsive Design:** Mobile-first CSS approach
+- **State Management:** React useState for interactive elements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Installation
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn package manager
+
+### Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/amber-films.git
+   cd amber-films
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Add your images:**
+   - Place team photos and studio images in the `public/` folder
+   - Ensure images are named: `1.png`, `2.png`, `3.png`, `4.png` (or update paths in components)
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. **Open your browser:**
+   Navigate to `http://localhost:3000` to view the website
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---

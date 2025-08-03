@@ -5,7 +5,7 @@
 }
 
 body {
-  background: transparent;
+  background: black;
   color: var(--foreground);
   font-family: Antonio, "Antonio Placeholder", sans-serif;
 }

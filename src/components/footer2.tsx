@@ -3,9 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="bg-[#111111] py-1 w-full">
-      <div className="container mx-auto px-4 flex flex-col items-center">
+      <div className="container mx-auto px-4  py-16 flex flex-col items-center">
         {/* Custom ruler */}
-        <div className="w-full mb-16 overflow-hidden">
+        <div className="w-full mb-16  overflow-hidden">
           <div 
             className="h-5 w-screen" 
             style={{
@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="w-1/2 md:w-1/3 border-b-2 border-white mt-4 mb-16"></div>
         
         {/* Custom ruler */}
-        <div className="w-full mb-16 overflow-hidden">
+        <div className="w-full mb-12  overflow-hidden">
           <div 
             className="h-5 w-screen" 
             style={{

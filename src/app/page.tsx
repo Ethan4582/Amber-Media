@@ -83,13 +83,14 @@ export default function Home() {
         </div>
         
         {/* Footer - Overlaps Page 8 */}
-        <div className="relative z-[6]  -mt-32">
+        <div className="relative z-[6]  mt-12">
           <Footer />
+          <FooterContact />
         </div>
         
         {/* Footer Contact - Overlaps Footer */}
-        <div className="relative z-[5]  -mt-32">
-          <FooterContact />
+        <div className="relative z-[5]  mt-42">
+        
         </div>
       </div>
     </main>
