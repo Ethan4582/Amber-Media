@@ -1,13 +1,8 @@
 'use client';
 
-
-import Page1 from '@/components/page1';
-import Header from '../components/Header';
 import { useEffect, useState } from 'react';
-import Page2 from '@/components/page2';
 
-
-export default function Home() {
+const RealTimeClock = () => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -27,14 +22,7 @@ export default function Home() {
     });
   };
 
-  return (
-    <div className="relative h-screen w-full overflow-auto">
-      {/* Header */}
-      <Header />
+  return <span>{formatTime(time)}</span>;
+};
 
-      <Page1/>
-      <Page2/>
-
-    </div>
-  );
-}
+export default RealTimeClock;
