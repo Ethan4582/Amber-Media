@@ -1,35 +1,31 @@
-
 import React from "react";
 
 const Page2 = () => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-80 contrast-100"
         src="https://framerusercontent.com/assets/dRHWzVptVvpgdXINm46ZLtoiwoY.mp4"
         autoPlay
         loop
         muted
         playsInline
       />
-      <div className="absolute inset-0 w-full h-full bg-black bg-opacity-40 z-10 pointer-events-none" />
-      <div className="relative z-20 flex flex-col items-end justify-center min-h-screen pr-24">
+      <div className="absolute inset-0 w-full h-ful z-10 pointer-events-none" />
+      <div className="relative  flex flex-col items-center justify-center h-full text-center">
         <h1
-          className="text-white text-[32px] font-bold text-right tracking-tight mb-6"
+          className="text-white text-[62px] font-bold tracking-tight "
           style={{
             fontFamily: '"Antonio", "Antonio Placeholder", sans-serif',
           }}
         >
           OF EARTH
         </h1>
-        <div className="text-white text-base font-medium text-right mb-8">
+        <div className="text-white text-base font-medium">
           2022 &nbsp;·&nbsp; Commercial
         </div>
-        <button className="bg-black bg-opacity-70 text-white font-bold px-6 py-2 rounded text-base">
-          VIEW
-        </button>
       </div>
-    </div>
+    </section>
   );
 };
 

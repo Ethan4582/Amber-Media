@@ -8,7 +8,7 @@ const navItems = [
 
 const Footer1 = () => {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-50 px-8 py-4 flex justify-center items-center">
+    <footer className="absolute bottom-0 left-0 right-0 z-50 px-8 py-4 flex justify-center items-center">
       <nav className="w-full flex justify-between items-center">
         {navItems.map((item) => (
           <span
