@@ -23,12 +23,12 @@ const Page8 = () => {
       <CustomPointer/>
       {/* Description Text */}
       <div className="w-full mb-16">
-        <p className="text-5xl md:text-5xl lg:text-5xl font-bold leading-tight max-w-9xl">
-          We're a videography studio driven by a love for cinematic storytelling 
-          and intentional filmmaking. From brand films and commercials to 
-          weddings and editorial pieces, we bring a crafted, artful approach to 
-          every frame.
-        </p>
+       <p className="text-5xl md:text-5xl lg:text-5xl font-bold leading-tight max-w-9xl">
+  We&apos;re a videography studio driven by a love for cinematic storytelling 
+  and intentional filmmaking. From brand films and commercials to 
+  weddings and editorial pieces, we bring a crafted, artful approach to 
+  every frame.
+</p>
       </div>
 
       {/* Divider Line */}
