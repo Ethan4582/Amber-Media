@@ -1,4 +1,5 @@
 import React from "react";
+import CustomPointer from "./CustomPointer";
 
 const Page8 = () => {
   const servicesLeft = [
@@ -19,6 +20,7 @@ const Page8 = () => {
 
   return (
     <section className="relative w-full min-h-screen bg-black text-white px-8 py-28 flex flex-col">
+      <CustomPointer/>
       {/* Description Text */}
       <div className="w-full mb-16">
         <p className="text-5xl md:text-5xl lg:text-5xl font-bold leading-tight max-w-9xl">

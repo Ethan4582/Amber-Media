@@ -11,8 +11,14 @@ import Page6 from "@/components/page6";
 import Page7 from "@/components/page7";
 import Page8 from "@/components/page8";
 import Lenis from "lenis";
+import { useRevealer } from "@/hooks/useReveal";
+import Banner from "@/components/banner";
+import Footer from "@/components/footer2";
+import FooterContact from "@/components/contact";
 
 export default function Home() {
+  useRevealer();
+
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time: number) {
@@ -25,8 +31,11 @@ export default function Home() {
 
   return (
     <main>
+      <div className="revealer fixed inset-0 bg-black z-[9999] origin-top scale-y-100 pointer-events-none" />
       <Header />
       <Page1 />
+      {/* Banner between Page1 and Page2 */}
+      <Banner />
       <Page2 />
       <Page3 />
       <Page4 />
@@ -34,6 +43,8 @@ export default function Home() {
       <Page6 />
       <Page7 />
       <Page8 />
+      <Footer />
+      <FooterContact/>
     </main>
   );
 }

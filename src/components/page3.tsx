@@ -1,8 +1,11 @@
 import React from "react";
+import CustomPointer from "./CustomPointer";
 
 const Page3 = () => {
   return (
+    
     <section className="relative w-full h-screen overflow-hidden">
+       <CustomPointer/>
       <video
         className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-80 contrast-100"
         src="https://framerusercontent.com/assets/z4Oilzyk8mFMgNgJGrjfmEBBNE.mp4"
@@ -25,6 +28,7 @@ const Page3 = () => {
           2023 &nbsp;·&nbsp; Short Film
         </div>
       </div>
+
     </section>
   );
 };
