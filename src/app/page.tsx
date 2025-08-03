@@ -43,6 +43,7 @@ export default function Home() {
       <Page6 />
       <Page7 />
       <Page8 />
+     
       <Footer />
       <FooterContact/>
     </main>

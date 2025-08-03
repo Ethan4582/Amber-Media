@@ -1,191 +1,282 @@
 'use client';
 
+import Footer from "@/components/footer2";
+import FooterContact from "@/components/contact";
 import React, { useState } from 'react';
+import Header from "@/components/Header";
 
 const ProjectsPage = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [mediaLoaded, setMediaLoaded] = useState({});
+  const [activeFilter, setActiveFilter] = useState("ALL");
 
   const projects = [
     {
-      id: 'amber-studio',
-      title: 'AMBER STUDIO',
-      type: 'Brand Film',
-      videoSrc: 'https://framerusercontent.com/assets/QvLulg0pZq1vK3tRI9hxALTpuw.mp4',
-      link: '/projects/amber-studio',
-      className: 'col-span-1 row-span-1'
-    },
-    {
-      id: 'of-earth',
-      title: 'OF EARTH',
-      type: 'Commercial',
+      id: 'OF EARTH',
+      title: 'Commercial',
+      type: 'FILMS/TV',
       videoSrc: 'https://framerusercontent.com/assets/dRHWzVptVvpgdXINm46ZLtoiwoY.mp4',
-      link: '/projects/of-earth',
-      className: 'col-span-1 row-span-1'
+      link: '/projects/amber-studio'
     },
     {
-      id: 'after-the-quiet',
-      title: 'AFTER THE QUIET',
-      type: 'Short Film',
+      id: 'AFTER THE QUIET',
+      title: 'SHORT FILM',
+      type:  'SHORT FILM',
       videoSrc: 'https://framerusercontent.com/assets/z4Oilzyk8mFMgNgJGrjfmEBBNE.mp4',
-      link: '/projects/after-the-quiet',
-      className: 'col-span-2 row-span-1'
+      link: '/projects/of-earth'
     },
     {
-      id: 'echoes-of-us',
-      title: 'ECHOES OF US',
-      type: 'Wedding Film',
-      videoSrc: 'https://framerusercontent.com/assets/Qd3Ic7sGavLSLs8uRt69vDA9tTc.mp4',
-      link: '/projects/echoes-of-us',
-      className: 'col-span-1 row-span-1'
+      id: 'ECHOES OF US',
+      title: 'Wedding Film',
+      type: 'FILMS/TV',
+      videoSrc:"https://framerusercontent.com/assets/Qd3Ic7sGavLSLs8uRt69vDA9tTc.mp4",
+      link: '/projects/after-the-quiet'
     },
     {
-      id: 'still-breathing',
-      title: 'STILL BREATHING',
-      type: 'Brand Film',
-      videoSrc: 'https://framerusercontent.com/assets/rujes19qnH473SeNzCgMuihBfOs.mp4',
-      link: '/projects/still-breathing',
-      className: 'col-span-1 row-span-1'
+      id: 'STILL BREATHING',
+      title: ' Brand Film',
+      type: 'FILMS/TV',
+      videoSrc:'https://framerusercontent.com/assets/rujes19qnH473SeNzCgMuihBfOs.mp4',
+      link: '/projects/after-the-quiet'
+    },
+
+    {
+      id: ' SCENT & SILENCE',
+      title: 'Film',
+      type: 'COMMERCIAL',
+      videoSrc:'https://framerusercontent.com/assets/8s2BBmflDJt5OXnAkNfeLkErqw.mp4',
+      link: '/projects/after-the-quiet'
     },
     {
-      id: 'scent-silence',
-      title: 'SCENT & SILENCE',
-      type: 'Commercial',
-      videoSrc: 'https://framerusercontent.com/assets/8s2BBmflDJt5OXnAkNfeLkErqw.mp4',
-      link: '/projects/scent-silence',
-      className: 'col-span-1 row-span-1'
-    },
-    {
-      id: 'light-between',
-      title: 'THE LIGHT BETWEEN',
-      type: 'Short Film',
-      videoSrc: 'https://framerusercontent.com/assets/HSdtyJ3OPhdFnShRKCkpEs238.mp4',
-      link: '/projects/light-between',
-      className: 'col-span-1 row-span-1'
+      id: '   THE LIGHT BETWEEN',
+      title: 'Short Film',
+      type: ' COMMERCIAL',
+      videoSrc:'https://framerusercontent.com/assets/HSdtyJ3OPhdFnShRKCkpEs238.mp4',
+      link: '/projects/after-the-quiet'
     }
   ];
 
   const photographyProjects = [
     {
-      id: 'wild-interiors',
-      title: 'WILD INTERIORS',
-      type: 'Photography',
-      imageSrc: 'https://framerusercontent.com/images/KNc16FV0KFyEXgmfxgSe5f0YPWo.jpg',
+      id: 'WILD INTERIORS',
+      title: 'Photography',
+      type: 'STILLS',
+      imageSrc: '/7.png',
       link: '/projects/wild-interiors'
     },
     {
-      id: 'portraits-stillness',
-      title: 'PORTRAITS IN STILLNESS',
-      type: 'Photography',
-      imageSrc: 'https://framerusercontent.com/images/YoJUEqVllERi0Vfk99fsQ7J2oQw.jpg',
+      id: 'PORTRAITS IN STILLNESS',
+      title: 'Photography',
+      type: 'STILLS',
+      imageSrc: '/8.png',
       link: '/projects/portraits-stillness'
     },
     {
-      id: 'heirloom-hands',
-      title: 'HEIRLOOM HANDS',
-      type: 'Photography',
-      imageSrc: 'https://framerusercontent.com/images/Wj0aAvz6aOncRvBJY53oNdTLPo.jpg',
+      id: 'HEIRLOOM HANDS',
+      title: 'Photography',
+      type: 'STILLS',
+      imageSrc: '/9.png',
       link: '/projects/heirloom-hands'
     }
   ];
 
   const handleProjectClick = (link) => {
-    window.location.href = `http://localhost:3000${link}`;
+    window.location.href = link;
   };
 
-  return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="py-16 text-center">
-        <h1 className="text-6xl md:text-8xl font-black tracking-wider mb-8">
-          PROJECTS
-        </h1>
-        <nav className="flex justify-center space-x-8 text-sm tracking-widest">
-          <a href="#" className="text-white border-b border-white pb-1">ALL</a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors">FILMS/TV</a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors">COMMERCIAL</a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors">STILLS</a>
-        </nav>
-      </header>
+  const handleMediaLoad = (projectId) => {
+    setMediaLoaded(prev => ({ ...prev, [projectId]: true }));
+  };
 
-      {/* Projects Grid */}
-      <div className="container mx-auto px-4 mb-16">
-        <div className="grid grid-cols-4 gap-4 auto-rows-[300px]">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className={`${project.className} relative overflow-hidden cursor-pointer group`}
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              onClick={() => handleProjectClick(project.link)}
-            >
-              <video
-                className={`w-full h-full object-cover transition-all duration-500 ${
-                  hoveredProject === project.id ? 'blur-sm scale-110' : 'blur-0 scale-100'
-                }`}
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={project.videoSrc} type="video/mp4" />
-              </video>
-              
-              {/* Overlay */}
-              <div className={`absolute inset-0 bg-black transition-opacity duration-300 ${
-                hoveredProject === project.id ? 'bg-opacity-40' : 'bg-opacity-0'
-              }`} />
-              
-              {/* Project Info */}
-              <div className="absolute bottom-4 left-4 z-10">
-                <h3 className="text-lg font-bold mb-1">{project.title}</h3>
-                <p className="text-sm text-gray-300">{project.type}</p>
+  const handleMediaError = (projectId) => {
+    setMediaLoaded(prev => ({ ...prev, [projectId]: false }));
+  };
+
+  // Filtering logic
+  let filteredVideoProjects = projects;
+  let filteredPhotoProjects = photographyProjects;
+
+  if (activeFilter !== "ALL") {
+    if (activeFilter === "STILLS") {
+      filteredVideoProjects = [];
+      filteredPhotoProjects = photographyProjects;
+    } else {
+      filteredVideoProjects = projects.filter(p => p.type === activeFilter);
+      filteredPhotoProjects = [];
+    }
+  }
+
+  return (
+    <div>
+      <div>
+       <Header className="mb-28" />
+    </div>
+
+   <div className="min-h-screen bg-black  text-white">
+  {/* Header with margin bottom */}
+ 
+  <header className="py-16 text-center">
+    <h1 className="text-6xl md:text-8xl font-black tracking-wider  py-10">
+      PROJECTS
+    </h1>
+    <nav className="flex justify-center space-x-8 text-sm tracking-widest">
+      {["ALL", "FILMS/TV", "COMMERCIAL", "STILLS"].map((filter) => (
+        <button
+          key={filter}
+          className={`pb-1 border-b transition-colors ${
+            activeFilter === filter
+              ? "text-white border-white"
+              : "text-gray-400 border-transparent hover:text-white"
+          }`}
+          onClick={() => setActiveFilter(filter)}
+        >
+          {filter}
+        </button>
+      ))}
+    </nav>
+  </header>
+
+      {/* Projects Grid - Video Projects */}
+      {filteredVideoProjects.length > 0 && (
+        <div className="container mx-auto mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {filteredVideoProjects.map((project) => (
+              <div key={project.id} className="mb-4">
+                <div
+                  className="relative overflow-hidden cursor-pointer group bg-gray-900"
+                  style={{
+                    height: "320px",    // less height
+                    minHeight: "320px",
+                    width: "100%",      // full width of grid cell
+                    aspectRatio: "3.5/1", // more rectangular
+                    borderRadius: "0px" // box shape, no rounding
+                  }}
+                  onMouseEnter={() => setHoveredProject(project.id)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                  onClick={() => handleProjectClick(project.link)}
+                >
+                  {/* Loading spinner */}
+                  {mediaLoaded[project.id] === undefined && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-800">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+                    </div>
+                  )}
+
+                  <video
+                    className={`w-full h-full object-cover transition-all duration-500 ${
+                      hoveredProject === project.id ? 'blur-sm scale-110' : 'blur-0 scale-100'
+                    } ${mediaLoaded[project.id] === false ? 'hidden' : ''}`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    onLoadedData={() => handleMediaLoad(project.id)}
+                    onError={() => handleMediaError(project.id)}
+                    style={{ display: mediaLoaded[project.id] === false ? 'none' : 'block' }}
+                  >
+                    <source src={project.videoSrc} type="video/mp4" />
+                  </video>
+
+                  {/* Fallback for failed videos */}
+                  {mediaLoaded[project.id] === false && (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+                      <div className="text-center">
+                        <div className="text-6xl mb-4">🎬</div>
+                        <p className="text-lg font-semibold">{project.title}</p>
+                        <p className="text-sm text-gray-300 mt-2">{project.type}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Hover Overlay */}
+                  <div className={`absolute inset-0 transition-opacity duration-300 ${
+                    hoveredProject === project.id ? 'bg-opacity-40' : 'bg-opacity-0'
+                  }`} />
+                </div>
+
+                {/* Project Info Outside Card */}
+                <div className="flex justify-between items-center mt-2 px-1">
+                  <span className="text-white text-base font-bold">{project.id}</span>
+                  <span className="text-gray-300 text-base font-normal">{project.title}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Photography Section */}
-      <div className="container mx-auto px-4 mb-16">
-        <div className="grid grid-cols-3 gap-4">
-          {photographyProjects.map((project) => (
-            <div
-              key={project.id}
-              className="relative h-[400px] overflow-hidden cursor-pointer group"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              onClick={() => handleProjectClick(project.link)}
-            >
-              <img
-                src={project.imageSrc}
-                alt={project.title}
-                className={`w-full h-full object-cover transition-all duration-500 ${
-                  hoveredProject === project.id ? 'blur-sm scale-110' : 'blur-0 scale-100'
-                }`}
-              />
-              
-              {/* Overlay */}
-              <div className={`absolute inset-0 bg-black transition-opacity duration-300 ${
-                hoveredProject === project.id ? 'bg-opacity-40' : 'bg-opacity-0'
-              }`} />
-              
-              {/* Project Info */}
-              <div className="absolute bottom-4 left-4 z-10">
-                <h3 className="text-lg font-bold mb-1">{project.title}</h3>
-                <p className="text-sm text-gray-300">{project.type}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {filteredPhotoProjects.length > 0 && (
+        <div className="container mx-auto px-4 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {filteredPhotoProjects.map((project) => (
+              <div key={project.id} className="mb-4">
+                <div
+                  className="relative overflow-hidden cursor-pointer group bg-gray-900"
+                  style={{
+                     height: "320px",    // less height
+                    minHeight: "320px",
+                    width: "100%",      // full width of grid cell
+                    aspectRatio: "3.5/1", // more rectangular
+                    borderRadius: "0px" // box shape, no rounding
+                  }}
+                  onMouseEnter={() => setHoveredProject(project.id)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                  onClick={() => handleProjectClick(project.link)}
+                >
+                  {/* Loading spinner */}
+                  {mediaLoaded[project.id] === undefined && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-800">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+                    </div>
+                  )}
 
-      {/* Made in Framer badge */}
-      <div className="fixed bottom-4 right-4">
-        <div className="bg-white text-black px-4 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
-          <span>📋</span>
-          <span>Made in Framer</span>
+                  <img
+                    src={project.imageSrc}
+                    alt={project.title}
+                    className={`w-full h-full object-cover transition-all duration-500 ${
+                      hoveredProject === project.id ? 'blur-sm scale-110' : 'blur-0 scale-100'
+                    } ${mediaLoaded[project.id] === false ? 'hidden' : ''}`}
+                    onLoad={() => handleMediaLoad(project.id)}
+                    onError={() => handleMediaError(project.id)}
+                    loading="lazy"
+                    style={{ display: mediaLoaded[project.id] === false ? 'none' : 'block' }}
+                  />
+
+                  {/* Fallback for failed images */}
+                  {mediaLoaded[project.id] === false && (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-900 via-teal-900 to-blue-900">
+                      <div className="text-center">
+                        <div className="text-6xl mb-4">📸</div>
+                        <p className="text-lg font-semibold">{project.title}</p>
+                        <p className="text-sm text-gray-300 mt-2">{project.type}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Hover Overlay */}
+                  <div className={`absolute inset-0 transition-opacity duration-300 ${
+                    hoveredProject === project.id ? 'bg-opacity-40' : 'bg-opacity-0'
+                  }`} />
+                </div>
+
+                {/* Project Info Outside Card */}
+                <div className="flex justify-between items-center mt-2 px-1">
+                  <span className="text-white text-base font-bold">{project.id}</span>
+                  <span className="text-gray-300 text-base font-normal">{project.title}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+      )}
+
+      <div className='mt-59'> 
+        <Footer />
+        <FooterContact />
       </div>
+    </div>
     </div>
   );
 };

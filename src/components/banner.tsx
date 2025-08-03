@@ -34,11 +34,11 @@ const LogoCarousel = () => {
       <div className="relative overflow-hidden">
         <div className="flex items-center">
           {/* Animated logo strip */}
-          <div className="flex items-center gap-20 animate-scroll whitespace-nowrap">
+          <div className="flex items-center gap-46 animate-scroll whitespace-nowrap">
             {logoSet.map((logo, index) => (
               <div
                 key={`logo-${index}`}
-                className="inline-flex items-center justify-center px-8"
+                className="inline-flex items-center justify-center px-4"
               >
                 <div 
                   className="relative w-full h-full flex items-center justify-center"

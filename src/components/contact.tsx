@@ -34,7 +34,7 @@ const FooterContact = () => {
             </a>
           </div>
           
-          <p>© {new Date().getFullYear()} STARTYOURSTORY.COM</p>
+          <p>© {new Date().getFullYear()} AMBERMEDIA.COM</p>
         </div>
       </div>
     </div>
