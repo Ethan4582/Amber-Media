@@ -68,8 +68,6 @@ export default function ProjectDetailPage() {
       {/* Full Page Hero Section with Video/Image */}
       <div 
         className="relative w-full h-screen overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         {/* Background Media */}
         <div className="absolute inset-0 z-0">
@@ -92,8 +90,8 @@ export default function ProjectDetailPage() {
           )}
         </div>
 
-        {/* Hover Overlay */}
-        {isHovered && (
+        {/* Only show backup info if no image/video available */}
+        {!project.videoSrc && !project.imageSrc && (
           <div className="absolute inset-0 z-10 bg-black bg-opacity-70 flex items-center justify-center transition-all duration-300">
             <div className="grid grid-cols-4 gap-8 text-center text-white">
               <div>
