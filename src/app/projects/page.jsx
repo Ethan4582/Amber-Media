@@ -145,11 +145,11 @@ const ProjectsPage = () => {
     <div>
       <Header className="mb-28" />
       <div className="min-h-screen bg-black text-white">
-        <header className="py-16 text-center">
-          <h1 className="text-6xl md:text-8xl font-black tracking-wider py-10">
+        <header className="py-10 sm:py-16 text-center">
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-8xl font-black tracking-wider py-6 sm:py-10">
             PROJECTS
           </h1>
-          <nav className="flex justify-center space-x-8 text-sm tracking-widest">
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 text-xs xs:text-sm sm:text-base tracking-widest">
             {["ALL", "FILMS/TV", "COMMERCIAL", "STILLS"].map((filter) => (
               <button
                 key={filter}
@@ -168,15 +168,15 @@ const ProjectsPage = () => {
 
         {/* Projects Grid - Video Projects */}
         {filteredVideoProjects.length > 0 && (
-          <div className="container mx-auto mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="container mx-auto px-2 xs:px-4 mb-16">
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 xs:gap-8">
               {filteredVideoProjects.map((project) => (
                 <div key={project.prj_id} className="mb-4">
                   <div
                     className="relative overflow-hidden cursor-pointer group bg-gray-900"
                     style={{
-                      height: "320px",
-                      minHeight: "320px",
+                      height: "220px",
+                      minHeight: "220px",
                       width: "100%",
                       aspectRatio: "3.5/1",
                       borderRadius: "0px"
@@ -212,9 +212,9 @@ const ProjectsPage = () => {
                     {mediaLoaded[project.prj_id] === false && (
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
                         <div className="text-center">
-                          <div className="text-6xl mb-4">🎬</div>
-                          <p className="text-lg font-semibold">{project.title}</p>
-                          <p className="text-sm text-gray-300 mt-2">{project.type}</p>
+                          <div className="text-4xl xs:text-6xl mb-2 xs:mb-4">🎬</div>
+                          <p className="text-base xs:text-lg font-semibold">{project.title}</p>
+                          <p className="text-xs xs:text-sm text-gray-300 mt-1 xs:mt-2">{project.type}</p>
                         </div>
                       </div>
                     )}
@@ -226,9 +226,9 @@ const ProjectsPage = () => {
                   </div>
 
                   {/* Project Info Outside Card */}
-                  <div className="flex justify-between items-center mt-2 px-1">
-                    <span className="text-white text-base font-bold">{project.displayName}</span>
-                    <span className="text-gray-300 text-base font-normal">{project.title}</span>
+                  <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center mt-2 px-1 gap-1">
+                    <span className="text-white text-sm xs:text-base font-bold">{project.displayName}</span>
+                    <span className="text-gray-300 text-sm xs:text-base font-normal">{project.title}</span>
                   </div>
                 </div>
               ))}
@@ -238,15 +238,15 @@ const ProjectsPage = () => {
 
         {/* Photography Section */}
         {filteredPhotoProjects.length > 0 && (
-          <div className="container mx-auto px-4 mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="container mx-auto px-2 xs:px-4 mb-16">
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 xs:gap-8">
               {filteredPhotoProjects.map((project) => (
                 <div key={project.prj_id} className="mb-4">
                   <div
                     className="relative overflow-hidden cursor-pointer group bg-gray-900"
                     style={{
-                      height: "320px",
-                      minHeight: "320px",
+                      height: "220px",
+                      minHeight: "220px",
                       width: "100%",
                       aspectRatio: "3.5/1",
                       borderRadius: "0px"
@@ -278,9 +278,9 @@ const ProjectsPage = () => {
                     {mediaLoaded[project.prj_id] === false && (
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-900 via-teal-900 to-blue-900">
                         <div className="text-center">
-                          <div className="text-6xl mb-4">📸</div>
-                          <p className="text-lg font-semibold">{project.title}</p>
-                          <p className="text-sm text-gray-300 mt-2">{project.type}</p>
+                          <div className="text-4xl xs:text-6xl mb-2 xs:mb-4">📸</div>
+                          <p className="text-base xs:text-lg font-semibold">{project.title}</p>
+                          <p className="text-xs xs:text-sm text-gray-300 mt-1 xs:mt-2">{project.type}</p>
                         </div>
                       </div>
                     )}
@@ -292,9 +292,9 @@ const ProjectsPage = () => {
                   </div>
 
                   {/* Project Info Outside Card */}
-                  <div className="flex justify-between items-center mt-2 px-1">
-                    <span className="text-white text-base font-bold">{project.displayName}</span>
-                    <span className="text-gray-300 text-base font-normal">{project.title}</span>
+                  <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center mt-2 px-1 gap-1">
+                    <span className="text-white text-sm xs:text-base font-bold">{project.displayName}</span>
+                    <span className="text-gray-300 text-sm xs:text-base font-normal">{project.title}</span>
                   </div>
                 </div>
               ))}
@@ -302,7 +302,7 @@ const ProjectsPage = () => {
           </div>
         )}
 
-        <div className='mt-59'>
+        <div className='mt-20 sm:mt-59'>
           <Footer />
           <FooterContact />
         </div>
