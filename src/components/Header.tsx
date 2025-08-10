@@ -12,7 +12,8 @@ const navItems = [
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-6 py-2 flex justify-between items-center">
-      <nav className="w-full flex justify-between items-center">
+      <nav className="w-full flex justify-between items-center
+        flex-col gap-2 sm:flex-row sm:gap-0">
         {navItems.map((item) => (
           item.external ? (
             <a
@@ -20,7 +21,7 @@ const Header = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-normal text-xm tracking-wide mx-6 relative group cursor-pointer"
+              className="text-white font-normal text-xm tracking-wide mx-2 sm:mx-6 relative group cursor-pointer text-base sm:text-xm"
             >
               <div className="block transition-all duration-600 group-hover:opacity-0 group-hover:-translate-y-1">
                 <SplitText
@@ -55,7 +56,7 @@ const Header = () => {
             <Link
               key={item.label}
               href={item.href}
-              className="text-white font-normal text-xm tracking-wide mx-6 relative group cursor-pointer"
+              className="text-white font-normal text-xm tracking-wide mx-2 sm:mx-6 relative group cursor-pointer text-base sm:text-xm"
             >
               <div className="block transition-all duration-600 group-hover:opacity-0 group-hover:-translate-y-1">
                 <SplitText

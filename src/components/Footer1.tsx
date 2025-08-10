@@ -8,12 +8,12 @@ const navItems = [
 
 const Footer1 = () => {
   return (
-    <footer className="absolute bottom-0 left-0 right-0 z-50 px-8 py-4 flex justify-center items-center">
-      <nav className="w-full flex justify-between items-center">
+    <footer className="absolute bottom-0 left-0 right-0 z-50 px-4 sm:px-8 py-3 sm:py-4 flex justify-center items-center">
+      <nav className="w-full flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
         {navItems.map((item) => (
           <div
             key={item}
-            className="text-white font-normal text-xm tracking-wide mx-6 relative group cursor-pointer"
+            className="text-white font-normal text-base sm:text-xm tracking-wide mx-2 sm:mx-6 relative group cursor-pointer"
           >
             <div className="block transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-1">
               <SplitText
@@ -47,7 +47,7 @@ const Footer1 = () => {
         ))}
 
         {/* Real-time clock */}
-        <span className="text-white font-normal text-xm tracking-wide mx-6 relative group cursor-pointer">
+        <span className="text-white font-normal text-base sm:text-xm tracking-wide mx-2 sm:mx-6 relative group cursor-pointer">
           <span className="block transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-1">
             <RealTimeClock />
           </span>
@@ -57,7 +57,7 @@ const Footer1 = () => {
         </span>
 
         {/* Copyright */}
-        <span className="text-white font-normal text-xm tracking-wide mx-6 relative group cursor-pointer">
+        <span className="text-white font-normal text-base sm:text-xm tracking-wide mx-2 sm:mx-6 relative group cursor-pointer">
           <span className="block transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-1">
             © Amber 2025
           </span>

@@ -1,34 +1,62 @@
 import React from "react";
+import Footer1 from "./Footer1";
 import CustomPointer from "./CustomPointer";
+import Header from "./Header";
 
-const Page5 = () => {
+const Page1 = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      <CustomPointer/>
+    <div className="relative w-full h-screen overflow-hidden">
+      <Header />
       <video
         className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-80 contrast-100"
-        src="https://framerusercontent.com/assets/rujes19qnH473SeNzCgMuihBfOs.mp4"
+        src="https://framerusercontent.com/assets/QvLulg0pZq1vK3tRI9hxALTpuw.mp4"
         autoPlay
         loop
         muted
         playsInline
       />
-      <div className="absolute inset-0 w-full h-ful z-10 pointer-events-none" />
-      <div className="relative  flex flex-col items-center justify-center h-full text-center">
+
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          pointerEvents: "none",
+          background: "transparent",
+          zIndex: 1000,
+        }}
+      >
+        <CustomPointer />
+      </div>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-2 sm:px-0">
         <h1
-          className="text-white text-[62px] font-bold tracking-tight "
+          className="
+            text-white
+            text-[36px]
+            xs:text-[60px]
+            sm:text-[120px]
+            md:text-[185px]
+            font-medium
+            text-center
+            tracking-[-0.06em]
+            leading-[1.1em]
+            uppercase
+            px-2
+            sm:px-4
+          "
           style={{
             fontFamily: '"Antonio", "Antonio Placeholder", sans-serif',
           }}
         >
-         STILL BREATHING
+          Amber Studio
         </h1>
-        <div className="text-white text-base font-medium">
-          2025 &nbsp;·&nbsp; Brand Film
-        </div>
       </div>
-    </section>
+      <Footer1 />
+      <div className="absolute bottom-0 left-0 right-0 z-50"></div>
+    </div>
   );
 };
 
-export default Page5;
+export default Page1;
