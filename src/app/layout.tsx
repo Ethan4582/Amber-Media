@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AMBER MEDIA",
+  title: "AMBER MEDIA - Studio for Cinematic Storytelling" ,
   description: "Studio for Cinematic Storytelling",
 };
 

@@ -1,5 +1,4 @@
-# Amber Films - Cinematic Storytelling Studio Website
-
+# Amber Films — Cinematic Storytelling Studio Website
 
 ![Screenshot](public/main1.png)
 
@@ -9,6 +8,35 @@
 ![Screenshot](public/main3.png)
 
 
+
+A sophisticated, dark-themed studio website designed for cinematic storytelling professionals. Features elegant typography, smooth animations, and a comprehensive showcase of team profiles, awards, and project portfolios — perfect for film studios and creative agencies.
+
+**Tech Stack:** Next.js • React • Tailwind CSS • TypeScript
+
+## Getting Started
+
+1. Clone the repository
+```bash
+git clone https://github.com/Ethan4582/amber-films.git
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Add your images
+   - Place team photos and studio images in the `public/` folder
+   - Ensure images are named: `1.png`, `2.png`, `3.png`, `4.png` (or update paths in components)
+
+4. Run the development server
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Features
 
 ### 🎨 Design & Aesthetics
 - **Dark Cinematic Theme** - Professional black and gray color palette
@@ -24,66 +52,23 @@
 - **Client Portfolio** - Premium brands and collaboration highlights
 - **Project Showcase** - Visual storytelling gallery (expandable)
 
-### 🛠️ Technical Features
-- **Component-Based Architecture** - Modular React components for maintainability
-- **Image Optimization** - Efficient loading and display of high-quality visuals
-- **Interactive Elements** - Engaging user interactions without overwhelming the content
-- **Professional Layout** - Grid systems optimized for visual hierarchy
 
-## 🚀 Technologies Used
+## Credits
 
-- **Frontend Framework:** React with functional components and hooks
-- **Styling:** Tailwind CSS with custom utility classes
-- **Icons:** Lucide React for consistent iconography
-- **Image Handling:** Optimized public folder structure
-- **Responsive Design:** Mobile-first CSS approach
-- **State Management:** React useState for interactive elements
+**Original Design:** Created by [@ThaerSwailem](https://x.com/ThaerSwailem)  
+**Framer Template:** [Amber Template](https://www.framer.com/marketplace/templates/amber/)
 
-## 📦 Installation
+This project is a Next.js implementation of the original Framer template. I don't sell any template - everything is free and source code is only provided after the template owner has given permission.
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm or yarn package manager
+## Developer
 
-### Setup Instructions
+**Converted to Next.js by:** [@Ethan4582](https://github.com/Ethan4582)  
+**Contact:** [@SinghAshir65848](https://x.com/SinghAshir65848)
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/amber-films.git
-   cd amber-films
-   ```
+## License
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Add your images:**
-   - Place team photos and studio images in the `public/` folder
-   - Ensure images are named: `1.png`, `2.png`, `3.png`, `4.png` (or update paths in components)
-
-4. **Run the development server:**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Open your browser:**
-   Navigate to `http://localhost:3000` to view the website
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+This project is for educational and commercial use. Please credit the original designer when using this template.
 
 ---
+
+*Transform your creative vision into a professional studio website that captivates clients and showcases your cinematic storytelling expertise.*
